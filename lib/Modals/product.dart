@@ -10,12 +10,12 @@ class Product {
       this.unitPrice, this.unitsInStock);
 
   Product.fromJson(Map json) {
-    id = json["id"];
-    categoryId = json["categoryId"];
+    id = int.parse(json["id"].toString());
+    categoryId = int.parse(json["categoryId"].toString());
     productName = json["productName"];
     quantityPerUnit = json["quantityPerUnit"];
-    unitPrice = json["unitPrice"];
-    unitsInStock = json["unitsInStock"];
+    unitPrice = double.parse(json["unitPrice"].toString()) ;
+    unitsInStock = int.parse(json["unitsInStock"].toString());
   }
 
   Map toJson() {
